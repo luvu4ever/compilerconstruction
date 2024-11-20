@@ -1,0 +1,41 @@
+PROGRAM EXAMPLE8;  (* STRING HANDLING TEST *)
+VAR
+  S1: STRING;
+  S2: STRING;
+  I: INTEGER;
+  C: CHAR;
+
+PROCEDURE PRINTSTRING(S: STRING);
+BEGIN
+  FOR I := 1 TO LENGTH(S) DO
+    CALL WRITEC(S[I])
+END;  (* END OF PRINTSTRING *)
+
+BEGIN
+  S1 := "Hello, World!";
+  S2 := "KPL String Test";
+
+  CALL WRITELN;
+  CALL PRINTSTRING(S1);
+  CALL WRITELN;
+  CALL PRINTSTRING(S2);
+  CALL WRITELN;
+
+  (* Concatenate strings *)
+  S1 := S1 + " " + S2;
+  CALL PRINTSTRING(S1);
+  CALL WRITELN;
+
+  (* Read and print a string *)
+  CALL WRITEC('>');
+  FOR I := 1 TO 20 DO
+    BEGIN
+      CALL READC(C);
+      IF C = '\n' THEN
+        BREAK;
+      S2[I] := C;
+    END;
+  CALL WRITELN;
+  CALL PRINTSTRING(S2);
+  CALL WRITELN;
+END.  (* END OF EXAMPLE8 *)
