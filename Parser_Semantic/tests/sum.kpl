@@ -1,0 +1,11 @@
+PROGRAM SwapTest;
+CONST d = 20;
+VAR  a:INTEGER;
+     b:INTEGER;
+     c:INTEGER;
+     res:INTEGER;
+
+BEGIN
+  res := sum a+b , d+d-c;
+  CALL WRITEI(res);
+END.

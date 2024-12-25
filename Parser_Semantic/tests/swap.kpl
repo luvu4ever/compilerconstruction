@@ -1,0 +1,20 @@
+PROGRAM SwapTest;
+CONST d = 20;
+VAR  a:INTEGER;
+     b:INTEGER;
+     c:Array(. 10 .) of INTEGER;
+     e:Array(. 10 .) of INTEGER;
+     f:INTEGER;
+
+BEGIN
+  a := 20;
+  b := 10;
+
+  a, b := b, a;
+  c(.0.), e(.1.)  := e(.1.), c(.0.);
+  a, b, f := b, a, d;
+
+  CALL WRITEI(a);
+  CALL WRITELN;
+  CALL WRITEI(b);
+END.

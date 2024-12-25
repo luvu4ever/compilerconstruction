@@ -1,0 +1,12 @@
+PROGRAM TEST;
+VAR
+  X: INTEGER;
+  Y: INTEGER;
+  Z: INTEGER;
+
+BEGIN
+  X, Y, Z := 1, 2, 3; (* Valid multiple assignment *)
+  CALL WRITEI(X); (* Should print 1 *)
+  CALL WRITEI(Y); (* Should print 2 *)
+  CALL WRITEI(Z); (* Should print 3 *)
+END.
